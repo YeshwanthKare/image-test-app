@@ -290,6 +290,7 @@
     right: 10px;
     flex-wrap: wrap ;
     margin-right: 64px;
+    /* background-color: #25d366; */
 }
 
 .author_profile {
@@ -305,6 +306,13 @@
     font-size: 14px;
     cursor: pointer;
     margin-top: 20px;
+    
+}
+
+.preview {
+    /* position: relative;
+    top: 30px;
+    left: 178px; */
 }
 
 .preview button {
@@ -320,6 +328,12 @@
 
 .img-dwnld i, .individual_delete i, .img-preview i {
     padding-right: 4px;
+}
+
+.img-preview {
+    /* position: relative; */
+    /* right: 190px; */
+    /* margin-left: 20px; */
 }
 
 .preview-url {
@@ -338,12 +352,13 @@
     background-color: #f0ebcc;
     width: 40%;
     text-align: center;
-    position: relative;
-    top: 27px;
-    left: 178px;
+    position: absolute;
+    /* top: 207px;
+    left: 178px; */
     border-radius: 7px;
     display: none;
     border: 1px solid rgba(0, 0, 0, 0.4);
+    z-index: 3;
 }
 
 .picture-size a, .preview-url a {
@@ -460,7 +475,7 @@ body {
     background-color: #fff;
     position: relative;
     left: 212px;
-    top: -36px;
+    top: -56px;
     padding: 10px;
     justify-content: space-around; 
     flex-wrap: wrap;

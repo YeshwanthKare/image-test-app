@@ -153,20 +153,26 @@ const searchParameters = (select_form, button_search, input_id) => {
 
 function removingLogin(){
     const token = localStorage.getItem("token");
-    if(token){
-        document.getElementById("login").style.display = "none"
-        document.querySelector(".join").style.display = "none"
-        document.querySelector(".hr-line").style.display = "none"
+    if(token === "undefined"){
+        document.getElementById("login").style.display = "block"
+        document.querySelector(".join").style.display = "block"
+        document.querySelector(".hr-line").style.display = "block"
+        document.querySelector(".sign-up").style.display = "block";
+        document.querySelector(".user_profile_pic").style.display = "none"
+    }else if(typeof token === "string"){
+        document.querySelector(".user_profile_pic").style.display = "block"
         document.querySelector(".explore_dropdown").style.right = '220px';
         document.querySelector(".user_profile_dropdown").style.left = "-150px"
         document.querySelector(".sign-up").style.display = "none";
-    }else{
+        document.querySelector(".join").style.display = "none"
+        document.getElementById("login").style.display = "none"        
+        document.querySelector(".hr-line").style.display = "none"
+    }
+    else{
         document.querySelector(".user_profile_pic").style.display = "none"
     }
 
 }
-
-// let user
 
 
 function userSettingFetch() {

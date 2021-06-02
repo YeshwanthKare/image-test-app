@@ -97,6 +97,8 @@ const showIndividualImage = (image) => {
     document.querySelector(".del").style.display = 'none'
     // document.querySelector(".profile-navigate").style.display = 'none'
     document.querySelector(".download-image").style.justifyContent = 'space-between'
+    // document.querySelector(".preview").style.top = "-28px"
+    // document.querySelector(".preview").style.left = "-30px"
     document.querySelector(".preview").style.marginLeft = "33px"
 
     let downloadContainer = document.querySelector(".picture-size");
@@ -128,7 +130,6 @@ const showIndividualImage = (image) => {
 
     downloadContainer.innerHTML = ulList
 
-
     let previewContainer = document.querySelector(".preview-url");
 
     let previewList = ""
@@ -140,8 +141,6 @@ const showIndividualImage = (image) => {
                 `
 
     previewContainer.innerHTML = previewList
-
-
 
     document.querySelector(".medium").addEventListener("click", () => {
         let imageEl = image.webformatURL   
@@ -300,8 +299,8 @@ const showUserImages = (img) => {
             // console.log(ulList)
 
     downloadContainer.innerHTML = ulList
-
-
+    
+    
     let previewContainer = document.querySelector(".preview-url");
 
     let previewList = ""
@@ -386,7 +385,15 @@ const removeImage = () => {
 
     let token = localStorage.getItem("token")
 
-    if(!token) {
+
+    if(token === "undefined") {
+        document.querySelector(".profile-navigate").style.display = "none"
+        document.querySelector(".img-dwnld").style.display = "none"
+        document.querySelector(".individual_share").style.display = "none"
+        document.querySelector(".individual_favorite").style.margin = "0 80px 0 0"
+        document.querySelector(".hr-line").style.display = "block"
+    }
+    else if(!token) {
         document.querySelector(".profile-navigate").style.display = "none"
         document.querySelector(".img-dwnld").style.display = "none"
         document.querySelector(".individual_share").style.display = "none"

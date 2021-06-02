@@ -151,7 +151,10 @@
             <div class="image_button">
                 <button class="individual_like"></button>
                 <button class="individual_favorite"></button>
+                
                 <button class="individual_share"><i class="fas fa-share-alt"></i></button>
+                   
+                
             </div>
              
 
@@ -173,7 +176,8 @@
                             
                         </ul>
                     </div>
-                </div>                
+                </div>
+                
             </div>
             
 
@@ -195,19 +199,11 @@
                     </div>
 
                 </div>
-            </div>
-
-            <!-- Picture Pixel Dropdown -->
-
-            <div class="picture-size">                
-
-            </div> 
-
-            <!-- Share Social Dropdown -->
+            </div>   
             
-            <div class="social-share">
-                
+            <div class="social-share">                
             </div>
+
             
 
         </div>
@@ -242,6 +238,12 @@
             $(document).click(() => {
                 $('.picture-size').hide();
             })
+
+            $(".img-preview").click(() => {
+                $(".picture-size").hide();
+            })
+
+            
             
         })
 
@@ -256,6 +258,25 @@
 
             $(document).click(() => {
                 $('.social-share').hide();
+            })
+            
+        })
+
+    </script>
+
+    <script>
+        $(document).ready(() => {
+            $('.img-preview').click((e) => {
+                e.stopPropagation();
+                $('.preview-url').fadeToggle('fast');
+            })
+
+            $(document).click(() => {
+                $('.preview-url').hide();
+            })
+
+            $(".img-dwnld").click(() => {
+                $(".preview-url").hide();
             })
             
         })

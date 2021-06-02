@@ -120,12 +120,12 @@
                         </div>
                         <hr class="hr_up">
 
-                        <form>
+                        <form class="login-sub">
                             <div class="register_icons">
                                 <a href="">
                                     <button class="register_google"><i class="fab fa-google"></i> Google</button>
                                 </a>
-                                <a href="">
+                                <a href="#">
                                     <button type="submit" onclick="logIn()" class="register_facebook"><i class="fab fa-facebook-square"></i> Facebook</button>
                                 </a>
                                 
@@ -227,12 +227,30 @@
         <script>
             window.fbAsyncInit = function() {
                 FB.init({
-                appId            : '862804140972732',
+                appId            : '604079604318898',
                 autoLogAppEvents : true,
                 xfbml            : true,
                 version          : 'v10.0'
                 });
             };
+
+            FB.getloginStatus = (res) => {
+                if(res.status === "connected"){
+                    document.getElementById("status").innerHTML = "Connected"
+                }else {
+                    document.getElementById("status").innerHTML = "Not connected"
+                }
+            }
+
+
+
+        </script>
+        <div id="status"></div>
+        <script>
+            let form = document.querySelector(".login-sub");
+            form.addEventListener("click", (e)=> {
+                e.preventDefault();
+            })
         </script>
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
     </body>
