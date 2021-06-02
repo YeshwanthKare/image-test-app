@@ -231,7 +231,7 @@
             })
 
 
-            var person = { userId: "", name: "", accessToken: "", picture: "", cover: "", email:"" }
+            var person = { userId: "", name: "", accessToken: "", picture: "", cover: "", email:"", hometown: "" }
 
 
             function login() {
@@ -239,7 +239,7 @@
                     if(res.status == "connected"){
                         person.userId = res.authResponse.userID
                         person.accessToken = res.authResponse.accessToken
-                        FB.api("/me", (userData) => {
+                        FB.api("/me?fields=id,name,email,hometown", "/me?edges=UserCoverPhoto.type(large),picture.type(large)" ,(userData) => {
                             console.log(userData)
                         })
                     }
