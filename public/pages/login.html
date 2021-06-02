@@ -224,34 +224,37 @@
                  
             }
         </script>
+        
+        
         <script>
             window.fbAsyncInit = function() {
                 FB.init({
-                appId            : '604079604318898',
-                autoLogAppEvents : true,
-                xfbml            : true,
-                version          : 'v10.0'
+                appId      : '177801370935141',
+                cookie     : true,
+                xfbml      : true,
+                version    : '{api-version}'
                 });
+                
+                FB.AppEvents.logPageView();   
+                
             };
 
-            FB.getloginStatus = (res) => {
-                if(res.status === "connected"){
-                    document.getElementById("status").innerHTML = "Connected"
-                }else {
-                    document.getElementById("status").innerHTML = "Not connected"
-                }
-            }
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
 
 
 
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
         </script>
-        <div id="status"></div>
-        <script>
-            let form = document.querySelector(".login-sub");
-            form.addEventListener("click", (e)=> {
-                e.preventDefault();
-            })
-        </script>
+       
+        
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
     </body>
 </html>
