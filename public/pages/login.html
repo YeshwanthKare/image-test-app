@@ -239,7 +239,7 @@
                     if(res.status == "connected"){
                         person.userId = res.authResponse.userID
                         person.accessToken = res.authResponse.accessToken
-                        FB.api("/me?fields=id,name,email,hometown,location,place_type,picture.type(large),cover.type(large),UserCoverPhoto.type(large)" ,
+                        FB.api("/me?fields=id,name,email,hometown,location,picture.type(large),cover.type(large),UserCoverPhoto.type(large)" ,
                         (userData) => {
                             console.log(userData)
                         })
