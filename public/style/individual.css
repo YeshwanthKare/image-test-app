@@ -120,6 +120,7 @@
 }
 
 .profile_name {
+    text-transform: capitalize;
     flex-grow: 1;
     font-style: normal;
     font-size: 16px;
@@ -130,6 +131,10 @@
 
 .profile-navigate {
     /* margin-left: 20px; */
+}
+
+.image-elem p {
+    text-transform: capitalize;
 }
 
 .profile-navigate a {
