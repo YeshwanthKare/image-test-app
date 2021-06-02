@@ -233,15 +233,19 @@
 
             var person = { userId: "", name: "", accessToken: "", picture: "", cover: "", email:"", hometown: "" }
 
+            console.log(person)
+
 
             function login() {
                 FB.login((res) => {
                     if(res.status == "connected"){
                         person.userId = res.authResponse.userID
                         person.accessToken = res.authResponse.accessToken
-                        FB.api("/me?fields=id,name,email,hometown,location,picture.type(large),cover.type(large)" ,
+                        FB.api("/me?fields=id,name,email,hometown,location,picture.type(large)" ,
                         (userData) => {
-                            console.log(userData)
+                            person.picture = userData.picture.data.url
+                            person.email = userData.email
+                            person.name = userData.name
                         })
                         // FB.api("/me?edges=UserCoverPhoto.type(large),picture.type(large)", (userData) => {
                         //     console.log(userData)
