@@ -81,7 +81,7 @@ const showIndividualImage = (image) => {
     document.querySelector(".individual_like").innerHTML = `<i class="far fa-heart"></i>  <span>${image.likes}</span>`
     document.querySelector(".individual_favorite").innerHTML = `<i class="far fa-star"></i>  <span>${image.favorites}</span>`
     document.querySelector(".image_comments").innerHTML = `<button>${image.comments}  comments</button>`
-    
+    document.querySelector(".individual_comment").innerHTML = `<span>${image.comments} comments</span>` 
 
     user.appendChild(userName);
     user.appendChild(userTags);
@@ -390,17 +390,18 @@ const removeImage = () => {
         document.querySelector(".profile-navigate").style.display = "none"
         document.querySelector(".img-dwnld").style.display = "none"
         document.querySelector(".individual_share").style.display = "none"
-        document.querySelector(".individual_favorite").style.margin = "0 80px 0 0"
+        document.querySelector(".individual_favorite").style.margin = "0 0px 0 0"
         document.querySelector(".hr-line").style.display = "block"
     }
     else if(!token) {
         document.querySelector(".profile-navigate").style.display = "none"
         document.querySelector(".img-dwnld").style.display = "none"
         document.querySelector(".individual_share").style.display = "none"
-        document.querySelector(".individual_favorite").style.margin = "0 80px 0 0"
+        document.querySelector(".individual_favorite").style.margin = "0 0px 0 0"
 
     }else{
         document.querySelector(".login_request").style.display = "none"
+        document.querySelector(".individual_comment").style.display = "none"
     }
     
 
