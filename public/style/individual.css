@@ -288,6 +288,12 @@
     justify-content: space-between;
     /* background-color:aquamarine; */
     right: 10px;
+    flex-wrap: wrap ;
+    margin-right: 64px;
+}
+
+.author_profile {
+    margin-right: 68px;
 }
 
 .download-image button {
@@ -298,10 +304,34 @@
     border: none;
     font-size: 14px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
-.img-dwnld i {
+.preview button {
+    padding: 10px 16px 10px 16px;
+    border-radius: 6px;
+    background: #008ddf;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.img-dwnld i, .individual_delete i, .img-preview i {
     padding-right: 4px;
+}
+
+.preview-url {
+    background-color: #f0ebcc;
+    width: 80%;
+    text-align: center;
+    position: relative;
+    border-radius: 7px;
+    display: none;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    z-index: 3;
+    /* left: 20px; */
 }
 
 .picture-size {
@@ -316,18 +346,18 @@
     border: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-.picture-size a {
+.picture-size a, .preview-url a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.4);
     font-size: 14px;
     font-weight: 600;
 }
 
-.picture-size a:hover {
+.picture-size a:hover, .preview-url a:hover {
     color: rgba(73, 62, 62, 0.4);
 }
 
-.picture-size ul li {
+.picture-size ul li, .preview-url li {
     padding: 8px 3px 8px 3px;
     cursor: pointer;
 }

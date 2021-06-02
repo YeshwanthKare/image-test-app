@@ -94,9 +94,10 @@ const showIndividualImage = (image) => {
 
     // downloadable images
 
-    document.querySelector(".individual_delete").style.display = 'none'
+    document.querySelector(".del").style.display = 'none'
     // document.querySelector(".profile-navigate").style.display = 'none'
-    document.querySelector(".download-image").style.justifyContent = 'flex-end'
+    document.querySelector(".download-image").style.justifyContent = 'space-between'
+    document.querySelector(".preview").style.marginLeft = "33px"
 
     let downloadContainer = document.querySelector(".picture-size");
     // console.log(downloadContainer)
@@ -126,6 +127,21 @@ const showIndividualImage = (image) => {
             // console.log(ulList)
 
     downloadContainer.innerHTML = ulList
+
+
+    let previewContainer = document.querySelector(".preview-url");
+
+    let previewList = ""
+
+    previewList = `
+                <li><a href="${image.webformatURL}" target="_blank">640px</a></li>
+                <li><a href="${image.largeImageURL}" target="_blank">1200px</a></li>
+                <li><a href="${image.fullHDURL}" target="_blank">1920px</a></li>
+                `
+
+    previewContainer.innerHTML = previewList
+
+
 
     document.querySelector(".medium").addEventListener("click", () => {
         let imageEl = image.webformatURL   
@@ -284,6 +300,17 @@ const showUserImages = (img) => {
             // console.log(ulList)
 
     downloadContainer.innerHTML = ulList
+
+
+    let previewContainer = document.querySelector(".preview-url");
+
+    let previewList = ""
+
+    previewList = `
+                <li><a href="${userImage}" target="_blank">Preview Image</a></li>
+                `
+
+    previewContainer.innerHTML = previewList
 
 
     document.querySelector(".my-image").addEventListener("click", () => {
