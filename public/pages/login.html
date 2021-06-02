@@ -240,7 +240,7 @@
             function login() {
                 FB.login((res) => {
                     console.log(res)
-                }, { scope: "email"})
+                }, { scope: "public_profile,email"})
             }
 
 
