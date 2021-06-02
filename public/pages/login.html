@@ -219,6 +219,19 @@
 
         <script>
 
+            let form = document.querySelector(".login-sub");
+
+            form.addEventListener("click", (e) => {
+                e.preventDefault()                
+                let button = document.querySelector(".register_facebook");
+
+                button.addEventListener("click", (e) => {
+                    e.preventDefault()
+                })
+            })
+
+            
+
             // function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
             //     console.log('statusChangeCallback');
             //     console.log(response);                   // The current login status of the person.
@@ -238,6 +251,8 @@
             // }
 
             function login() {
+                
+                e.preventDefault()
                 FB.login((res) => {
                     console.log(res)
                 }, { scope: "public_profile,email"})
