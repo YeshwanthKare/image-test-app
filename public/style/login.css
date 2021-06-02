@@ -1,0 +1,42 @@
+.register_join {
+    color: #adb5bd;
+    border-bottom: none;
+}
+
+.register_join:hover {
+    color: #0a88d3;
+}
+
+.register_login {
+    color: #0a88d3;
+    border-bottom: 3px solid #0a88d3;
+    padding-bottom: 10px;
+}
+
+#register_submit {
+    width: 286px;
+    left: 3px;
+    
+}
+
+.register_form input {
+    position: absolute;
+    transform: translate3d(0, 60px, 0);
+}
+
+.register_form input[type=text] {
+    margin-bottom: 6px;
+}
+
+.register_form input[type = submit] {
+    transform: translate3d(0, -10px, 0);
+}
+
+.register_container {
+    height: 460px;
+}
+
+.register_main {
+    height: 800px;
+}
+

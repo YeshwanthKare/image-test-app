@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+#register_Search {
+    position: absolute;
+    margin-left: -35px;
+    min-width: 400px;
+    max-width: 610px;
+    width: 100%;
+    
+}
+
+.body_settings .body_settings_container ul li {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 20px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.body_settings .body_settings_container ul li:nth-child(2) {
+    border-bottom: 2px solid #1e90ff;
+}
+
+.body_settings .body_settings_container ul li:nth-child(3) {
+    position: relative;
+    left: 1000px;
+}
+
+
+.explore_dropdown {
+    right: 210px;
+}
+
+
+form {
+    position: relative;
+    left: 40px;
+}
+
+.personal-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px
+}
+
+#personal, #option-heading {
+    font-size: 16px;
+    font-family: "Open Sans";
+    font-weight: 600;
+    color: #05445E;
+}
+
+.left_column, .right_column {
+    width: 630px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    /* border: 1px solid #ccc; */
+}
+
+.left_column {
+    margin-right: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    object-fit: cover;
+    background-size: cover;
+    background-color: #D4F1F4;
+}
+
+ul li a{
+    font-family: "Open Sans", Helvetica, sans-serif;
+    text-decoration: none;
+    color: #05445E;
+}
+
+hr {
+    border-color: 1px solid #05445E;
+}
+
+#personal, .username_setting span{
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    color: #05445E;
+}
+
+#profile {
+    color:#05445E;
+}
+
+#city {
+    color: #05445E;
+}
+
+#country {
+    color: #05445E;
+}
+
+.email-setting-header {
+    color: #05445E;
+}
+
+.profile_image_box {
+    height: 180px;
+    width: 180px;
+    background-color: #E7D2CC;
+    border: 1px solid rgba(0,0,0,0.4);
+    position: relative;
+    left: 100px;
+    bottom: 10px;
+    /* background-image: url(http://localhost:3002/uploads/profileImage-1621783266858.jpg); */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.cover-image {
+    /* transform: translate3d(400px, 200px, 0); */
+}
+
+.cover-image label {
+    background:none;
+    color: black;
+}
+
+
+.profile-image {
+    background-color: darkblue;
+}
+
+.profile_image_box label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    height: 35px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 100%;
+    content: "Upload Photo";
+    background-color: #EEEDE7;
+    color: #868B8E;
+    cursor: pointer;
+}
+
+.profile_image_box label:hover {
+    background-color: cadetblue;
+    color: black;
+    cursor: pointer;
+}
+
+#profile-image {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    cursor: pointer;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+input[type = file], input[type = button], input[type = reset] {
+    cursor: pointer;
+}
+
+input#user_heading {
+    /* float: right; */
+    height: 30px;
+    width: 250px;
+    transform: translateX(22px);
+    font-size: 18px;
+    padding-left: 8px;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.4);
+}
+
+.extra_setting {
+    margin-top: -100px;
+}
+
+.extra_setting .more_settings {
+
+}
+
+.cover-image {
+    transform:translate3d(-118px, 0px, 0)
+    
+}
+
+.cover-image span {
+    color: #05445E;
+}
+
+.cover-image input {
+   
+}
+
+.settings_save {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background-color: #75E6DA;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings_save input {
+    padding: 10px 100px;
+    background-color: #189AB4;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.settings_save input:hover {
+    background-color: #05445E;
+}
+
+.settings_save button a {
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    /* font-weight: 600; */
+}
+
+#personal {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#hr-up {
+    position: absolute;
+    top: 20px;
+}
+
+.username_setting {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+}
+
+.profile_image_setting {
+    position: absolute;
+    left: 20px;
+    top: 130px;
+}
+
+.place_setting {
+    position: absolute;
+    bottom: 80px;
+    left: 20px;
+}
+
+.city_setting input, .country_setting input {
+    height: 30px;
+    width: 265px;
+    font-size: 18px;
+    padding-left: 8px;
+}
+
+.city_setting input {
+    transform: translateX(66px);
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.4);
+}
+
+.country_setting input {
+    transform: translateX(36px);
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.4);
+}
+
+.country_setting {
+    position: relative;
+    bottom: -40px;
+}
+
+#option-heading {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.email-setting-header {
+    position:absolute;
+    top: 60px;
+    left: 20px;
+}
+
+.current_email {
+    position: absolute;
+    top: 60px;
+    transform: translateX(-80px)
+}
+
+.email_setting a {
+    position: absolute;
+    top: 90px;
+    transform: translateX(-80px);
+}
+
+.signin_header {
+    position: absolute;
+    top: 130px;
+    left: 20px;
+}
+
+
+.more_settings {
+    position: absolute;
+    top: 110px;
+    left: 20px;
+    color: #05445E;
+}
+
+#set-password {
+    transform: translate3d(-100px, -44px,0);
+    padding: 8px 18px;
+    background-color: #0078e7;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+}
+
+#del-account {
+    transform: translate3d(140px, -79px, 0);
+    padding: 8px 18px;
+    background-color: #0078e7;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+}
+
+#del-account:hover, #set-password:hover{
+    background-color: #05445E;
+}
+
+.user_profile_dropdown {
+    left: -170px;
+}
+
+
+/*  Modal  */
+
+.modal-form {
+    position: relative;
+    top: 100px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.del-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.del-close:hover,
+.del-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content {
+    position: relative;
+    top: 60px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+/* .modal-content {
+    position: relative;
+    top: 60px;
+    height: 100px;
+    border-radius: 8px;
+} */
+
+.password-modal {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    /* margin: auto; */
+    /* background-color: #1e90ff; */
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+#new-password, #reenter-password {
+    font-size: 12px;
+    height: 20px;
+    width: 70%;
+    margin-left: 30px;
+    text-align: center;
+}
+
+#password-submit {
+    font-size: 14px;
+    width: 70%;
+    padding: 4px 20px 4px 20px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+
+.modal-info p{
+    text-align: center;
+    padding-top: 40px;
+} 
+
+.modal-button {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.yes {
+    margin-right: 20px;
+    padding: 2px 20px;
+    cursor: pointer;
+}
+
+.modal-button a button {
+    text-decoration: none;
+    color: #0078e7;
+}
+
+.no a {
+    text-decoration: none;
+    color: #0078e7;
+}
+
+.no {
+    margin-left:20px;
+    padding: 2px 20px;
+    cursor: pointer;
+}
+
+

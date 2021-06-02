@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ImageGram</title>
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="/style/index.css">
+        <link rel="stylesheet" href="/style/register.css">
+        <link rel="stylesheet" href="/style/photos.css">
+        <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="../scripts/index.js"></script>
+        <script src="../scripts/individual.js"></script>
+        <script src="/config.js"></script>
+        <script src="../scripts/photos.js"></script>
+        <script src="/scripts/session.js"></script>
+        <!-- <script src="nav-dropdown.js"></script> -->
+        <style>
+            .show {
+                display: block;
+            }
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <div class="main-header">
+                <ul class="nav-left">
+                    <li class="display-left logo"><a  href="/index.html">
+                        <h1>ImageGram</h1>
+                    </a></li>
+                    <li class="display-left"><a class="nav-hide" href="/pages/photos.html">Photos</a></li>
+                    <li class="display-left"><a class="nav-hide" href="/pages/vectors.html">Vectors</a></li>
+                    <li class="display-left"><a class="nav-hide" href="/pages/illustration.html">Illustrations</a></li>
+                </ul>
+                <ul class="nav-right">
+                    <li>
+                        <div class="explore"><button class="explore-btn nav-pad nav-hide"><a>Explore<i class="fas fa-angle-down explore_arrow"></i></a></button></div> 
+                        <div id="exp-drp-dwn" class="explore_dropdown">
+                            <div class="dropdown_container">
+                               <ul class="media">
+                                    <b>Media</b>
+                                    <li><a class="hide-nav-option" href="/pages/photos.html">Photos</a></li>
+                                    <li><a class="hide-nav-option" href="/pages/illustration.html">Illustrations</a></li>
+                                    <li><a class="hide-nav-option" href="/pages/vectors.html">Vectors</a></li>
+                                    <hr class="hide-nav-option">
+                                    <li>
+                                        <ul class="media-option">
+                                            <li><a href="#">Editor's Choice</a></li>
+                                            <li><a href="#">Popular Images</a></li>
+                                            <li><a href="#">Popular Searches</a></li>
+                                        </ul>
+                                    </li>                                   
+                                    
+                                </ul>
+                                <hr>
+                                <ul class="community">
+                                    <b>Community</b>
+                                    <li><a href="https://my-blog-app-2ffbe.web.app" target="_blank">Blog</a></li>
+                                    <li><a href="#">Artists</a></li>
+                                </ul>
+                                <hr>
+                                <ul class="about">
+                                    <b>About</b>
+                                    <li><a class="about_us" href="https://design-portfolio-af396.web.app" target="_blank">About Us</a></li>
+                                    <!-- <li><a class="language_icon" href="#"><i class="fas fa-globe"></i> Language</a></li> -->
+                                    <hr class="my-hr-line">                                    
+                                    <li class="social_icons">
+                                    
+                                        <a class="icon" href="https://www.facebook.com/yesh.surya.5" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                                        <a class="icon" href="https://www.instagram.com/yeshwanth_nadh/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                        <a class="icon" href="https://twitter.com/yeshsuriya" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                
+                                
+                                </ul>
+                            </div>
+                        </div>
+                            
+                        
+
+                        
+                    </li>
+                    <!-- <i class="fas fa-angle-down"></i> -->
+                    <li class="display-right nav-pad"><a id="login" href="/pages/login.html">Log in</a></li>
+                    <div class="hr-line">
+                        <hr style="display: inline; width: 100%; position: relative; color: #adb5bd !important;">
+                    </div>
+                    <li class="display-right join nav-pad"><a href="/pages/register.html">Join</a></li>
+                    <li class="user_profile_pic"></li>
+                    <li class="user_profile_dropdown">
+                        <ul>
+                            <li><a href="/pages/myprofile.html">My Profile</a></li>
+                            <li><a href="/pages/upload.html">Upload</a></li>
+                            <li><a href="/pages/settings.html">settings</a></li>
+                            <hr>
+                            <li onclick="logOut()"><a href="#" onclick="logOut()">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li class="display-right nav-pad"><a href="/pages/upload.html"><button class="upload_button nav-hide"><i class="fas fa-upload"></i> Upload</button></a></li>
+                    <li class="menu-bar">
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </header>
+        <div class="main">
+            <div class="photo_feature">
+                <h1>Stunning free images and royalty free stock</h1>
+                <h4>Over 1.9 million+ high quality stock images, videos and music shared by our talented community.</h4>
+                <div class="search_container">
+                    <i class="fas fa-search feature_search"></i>
+                    <form>
+                        <input type="text" id="Search" placeholder="Search Images, Vectors and Illustrations">
+                        <input type="submit" id="search_submit">
+                    </form>
+                    <div class="search-select">
+                        <select name="option" id="option">
+                            <option value="image">Images</option>
+                            <option value="photo">Photos</option>
+                            <option value="vector">Vector Graphics</option>
+                            <option value="illustration">Illustrations</option>
+                        </select>
+                        <span style='background-color:aqua' class="search_arrow"><i class="fas fa-angle-down search_arrow"></i></span>
+                    </div>
+                    
+                </div>
+                <div class="popular_Images_line">Popular Images: background, nature, money, love, business, food, winter, flowers, office, computer, sky, dog</div>
+                <div class="free_images_line">Free images by Pixabay</div>
+            </div>
+            <div class="images">
+                <div class="images_container">
+                    <div class="photo_wrapper">
+                        
+                    </div>
+                    <div class="footer">
+                        <a class="discover_footer" href="#">
+                            <button>Discover more</button>
+                        </a>
+                        <div class="footer_data">
+                            <p>Free Images and Videos you can use anywhere</p>
+                            <p>JOIN ImageGram</p>
+                            <p class="end_footer">Download royalty free photos, videos and music. Share your own pictures as public domain with people all over the world.</p>
+                            <a class="sign-up" href="/pages/register.html"><button>Sign up, it's free!</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(() => {
+                $('.user_profile_pic').click((e) => {
+                    e.stopPropagation();
+                    $('.user_profile_dropdown').fadeToggle('fast');
+                })
+
+                $(document).click(() => {
+                    $('.user_profile_dropdown').hide();
+                })
+               
+            })
+        </script> 
+        
+    </body>
+</html>

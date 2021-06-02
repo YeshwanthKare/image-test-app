@@ -1,0 +1,104 @@
+.upload_body .upload_container ul li {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 20px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #232323;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #05445E;
+}
+
+.upload_body .upload_container ul li:nth-child(1) {
+    border-bottom: 2px solid #1e90ff;
+}
+
+.upload_body .upload_container ul li:nth-child(3) {
+    position: relative;
+    left: 1000px;
+}
+
+form#upload-user-image {
+    position: relative;
+    top: 60px;
+    left: 40px;
+}
+
+input[type = submit], input[type = file] {
+    cursor: pointer
+}
+
+label {
+    color: #05445E;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+
+#tags {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    height: 50px;
+    width: 600px;
+    font-size: 18px;
+    padding: 8px 20px 8px 20px !important;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.4);
+    /* background-color: #EEEDE7; */
+}
+
+body {
+    background-color: #D4F1F4;
+}
+
+hr {
+    border-color: 1px solid #05445E;
+}
+
+#name {
+    height: 20px;
+    width: 16%;
+    padding: 4px 12px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 7px;
+    /* background-color: #EEEDE7; */
+}
+
+#image_upload {
+    position: absolute;
+    top: 200px;
+    left: 0px;
+}
+
+#submit {
+    position: absolute;
+    left: 0px;
+    top: 260px;
+    border: none;
+    padding: 8px 40px;
+    border-radius: 14px;
+    background-color: #1e90ff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.main-header .nav-right li .upload_button {
+    
+}
+
+.user_profile_dropdown {
+    left: -170px;
+}
+
+.explore_dropdown {
+    right: 210px;
+}

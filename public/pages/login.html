@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login ImageGram</title>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="/style/index.css">
+        <link rel="stylesheet" href="/style/register.css">
+        <link rel="stylesheet" href="/style/login.css">
+        <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+        <script src="/scripts/index.js"></script>
+        <script src="/scripts/session.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="main-header register-header">
+                <ul class="nav-left">
+                    <li class="display-left logo">
+                        <a  href="/index.html">
+                            <h1>ImageGram</h1>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="register_search">
+                            <i class="fas fa-search feature_search_register"></i>
+                            <form>
+                                <input type="text" id="register_Search" placeholder="Search">
+                                <input type="submit" id="search_submit">
+                            </form>
+                            <div class="register_select">
+                                <select name="option" id="register_option">
+                                    <option value="image">Images</option>
+                                    <option value="photo">Photos</option>
+                                    <option value="vector">Vector Graphics</option>
+                                    <option value="illustration">Illustrations</option>
+                                </select>
+                                <span class="register_search_arrow"><i class="fas fa-angle-down search_arrow register_arrow"></i></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav-right">
+                    <li>
+                        <div class="explore"><button class="explore-btn nav-pad nav-hide"><a>Explore<i class="fas fa-angle-down explore_arrow"></i></a></button></div> 
+                        <div id="exp-drp-dwn" class="explore_dropdown">
+                            <div class="dropdown_container">
+                               <ul class="media">
+                                    <b>Media</b>
+                                    <li><a class="hide-nav-option" href="">Photos</a></li>
+                                    <li><a class="hide-nav-option" href="">Illustrations</a></li>
+                                    <li><a class="hide-nav-option" href="">Vectors</a></li>
+                                    <hr class="hide-nav-option">
+                                    <li>
+                                        <ul class="media-option">
+                                            <li><a href="#">Editor's Choice</a></li>
+                                            <li><a href="#">Popular Images</a></li>
+                                            <li><a href="#">Popular Searches</a></li>
+                                        </ul>
+                                    </li>                                   
+                                    
+                                </ul>
+                                <hr>
+                                <ul class="community">
+                                    <b>Community</b>
+                                    <li><a href="https://my-blog-app-2ffbe.web.app" target="_blank">Blog</a></li>
+                                    <li><a href="#">Artists</a></li>
+                                </ul>
+                                <hr>
+                                <ul class="about">
+                                    <b>About</b>
+                                    <li><a class="about_us" href="https://design-portfolio-af396.web.app" target="_blank">About Us</a></li>
+                                    <!-- <li><a class="language_icon" href="#"><i class="fas fa-globe"></i> Language</a></li> -->
+                                    <hr class="my-hr-line">                                    
+                                    <li class="social_icons">
+                                    
+                                        <a class="icon" href="https://www.facebook.com/yesh.surya.5" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                                        <a class="icon" href="https://www.instagram.com/yeshwanth_nadh/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                        <a class="icon" href="https://twitter.com/yeshsuriya" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                
+                                
+                                </ul>
+                            </div>
+                        </div>
+                            
+                        
+
+                        
+                    </li>
+                    <!-- <i class="fas fa-angle-down"></i> -->
+                    <li class="display-right nav-pad"><a id="login" href="/pages/login.html">Log in</a></li>
+                    <div>
+                        <hr style="display: inline; width: 100%; position: relative; color: #adb5bd !important;">
+                    </div>
+                    <li class="display-right join nav-pad"><a href="/pages/register.html">Join</a></li>
+                    <li class="display-right nav-pad"><a href="/pages/upload.html"><button class="upload_button nav-hide"><i class="fas fa-upload"></i> Upload</button></a></li>
+                    <li class="menu-bar">
+                        <a href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </header>
+        <div class="register_main">
+            
+            <div class="register_container">
+                <div class="links">
+                    <div class="links_container">
+                        <div class="login">
+                           <a class="register_login" href="/pages/login.html">
+                                Login
+                            </a>
+                            <a class="register_join" href="/pages/register.html">
+                                Join
+                            </a>
+                        </div>
+                        <hr class="hr_up">
+
+                        <form>
+                            <div class="register_icons">
+                                <a href="">
+                                    <button class="register_google"><i class="fab fa-google"></i> Google</button>
+                                </a>
+                                <a href="">
+                                    <button type="submit" onclick="logIn()" class="register_facebook"><i class="fab fa-facebook-square"></i> Facebook</button>
+                                </a>
+                                
+                            </div>
+                        </form>
+                        
+                        
+                    </div>
+                    <hr class="hr_middle">
+                    <form class="register_form" id="login_form">
+                        <input id="email" type="text" placeholder="Email" name="email">
+                        <input id="password" type="password" placeholder="Password" name="password">
+                        <input id="register_submit" type="submit" value="Login">
+                    </form>
+                    <div class="register_terms">
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <script>
+            const logIn = () => {
+                FB.login((res) =>{
+                    console.log(res)
+                })
+            }
+        </script>
+
+        <script>
+            window.onload = () => {
+                searchImages();
+                dropDown();
+            }
+
+            searchImages = () => {
+                searchParameters("#register_option", "search_submit", "#register_Search")
+            }
+        </script>
+        <script>
+
+            let loginForm = document.getElementById("login_form");
+            loginForm.addEventListener("submit", userLogin)
+
+
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const existingEmail = urlParams.get("existingEmail");
+            const registered = urlParams.get("registered");
+            const alreadyRegistered = urlParams.get("user");
+
+            if(registered){
+                loginForm.email.value = existingEmail;
+                alert("Successfully Registered");
+            }
+
+            if(alreadyRegistered){
+                loginForm.email.value = existingEmail;
+                alert("Already Registered");
+            }
+
+
+
+            let url = `https://image-site-app.herokuapp.com/`
+
+            function userLogin(e){
+                e.preventDefault();
+
+                let payload = {
+                    email: loginForm.email.value,
+                    password: loginForm.password.value
+                }
+
+                fetch(`${url}/users/login`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(payload)
+                })
+                .then((res) => {
+                    return res.json();
+                })
+                .then((res) => {
+                    console.log(res)
+                    localStorage.setItem("token", res.token)
+
+                    if(res.status === 'valid'){
+                       location.href = `/index.html`
+                    }else{
+                        alert("Email or Password Not Valid.")
+                    }
+                })
+                 
+            }
+        </script>
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                appId            : '862804140972732',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v10.0'
+                });
+            };
+        </script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    </body>
+</html>
