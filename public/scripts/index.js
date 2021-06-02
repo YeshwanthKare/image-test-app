@@ -171,7 +171,7 @@ function removingLogin(){
 
 function userSettingFetch() {
     // let key = config.MY_KEY;
-    return fetch(`https://image-site-app.herokuapp.com/users/settings/`)
+    return fetch(`https://image-gram-test.herokuapp.com/users/settings/`)
     // &q=all&image_type=all
     .then((response) => {
         if(response.ok) {
@@ -198,7 +198,7 @@ const userProfileImage = (data) => {
     for (const img of data) {
         let userName = img.username;
         console.log(userName)
-        let userProfileImage = `https://image-site-app.herokuapp.com/${img.profileImage}`         
+        let userProfileImage = `https://image-gram-test.herokuapp.com/${img.profileImage}`         
         if(token === img.user_id){
             document.querySelector(".user_profile_pic").style.backgroundImage = `url(${userProfileImage})`
         }        

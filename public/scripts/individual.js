@@ -25,7 +25,7 @@ function getIndividualImage() {
     if(getPostIdParam().length <= 7){
         myUrl = `https://pixabay.com/api/?key=${my_key}&id=${getPostIdParam()}`
     }else{
-        myUrl = `https://image-site-app.herokuapp.com/users/image/${getPostIdParam()}`
+        myUrl = `https://image-gram-test.herokuapp.com/users/image/${getPostIdParam()}`
     }
 
     if(myUrl){
@@ -204,7 +204,7 @@ const showIndividualImage = (image) => {
 
 
 const settingsFetch =  () => {
-    const settingUrl = `https://image-site-app.herokuapp.com/users/settings`;
+    const settingUrl = `https://image-gram-test.herokuapp.com/users/settings`;
     return fetch(settingUrl, {
         method: "GET"
     })
@@ -217,7 +217,7 @@ const settingsFetch =  () => {
 const showUserImages = (img) => {
     console.log(img)
 
-    const url = `https://image-site-app.herokuapp.com/`
+    const url = `https://image-gram-test.herokuapp.com/`
     let container = document.querySelector(".individual_image_container");
     let imageElem = document.createElement('img');
     let divEl = document.createElement("div");
@@ -412,7 +412,7 @@ const removeImage = () => {
         const imageId = getPostIdParam()
         console.log("image id is: ", imageId)
 
-        fetch(`https://image-site-app.herokuapp.com/users/delete`, {
+        fetch(`https://image-gram-test.herokuapp.com/users/delete`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

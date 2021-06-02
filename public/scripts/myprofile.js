@@ -7,8 +7,8 @@ window.onload = () => {
 }
 
 
-let API = `https://image-site-app.herokuapp.com/users/image`
-let API_BASE_URL = `https://image-site-app.herokuapp.com/`;
+let API = `https://image-gram-test.herokuapp.com/users/image`
+let API_BASE_URL = `https://image-gram-test.herokuapp.com/`;
 
 
 const userImageFetch = () => {
@@ -69,7 +69,7 @@ const addUserImages = (images) => {
      
 }
 
-let Settings_API = `https://image-site-app.herokuapp.com/users/settings`
+let Settings_API = `https://image-gram-test.herokuapp.com/users/settings`
 
 
 const userSettingsFetch = () => {

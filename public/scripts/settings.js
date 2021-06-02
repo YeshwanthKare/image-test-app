@@ -17,7 +17,7 @@ searchImages = () => {
 }
 
 const postSettingsData = () => {
-    let url = `https://image-site-app.herokuapp.com/users/settings`
+    let url = `https://image-gram-test.herokuapp.com/users/settings`
     let form = document.getElementById("reg-form");
 
     form.addEventListener("submit", (e) => {
@@ -91,7 +91,7 @@ const postSettingsData = () => {
 
 
 const userDetailsFetch = () => {
-    let userDetailsURL = `https://image-site-app.herokuapp.com/users` 
+    let userDetailsURL = `https://image-gram-test.herokuapp.com/users` 
     
 
     return fetch(userDetailsURL,{
@@ -104,7 +104,7 @@ const userDetailsFetch = () => {
 }
 
 const userSettingsFetch = () => {
-    let userSettingsURL = `https://image-site-app.herokuapp.com/users/settings`
+    let userSettingsURL = `https://image-gram-test.herokuapp.com/users/settings`
 
     return fetch(userSettingsURL,{
         method: "GET"
@@ -131,7 +131,7 @@ const showUserDetails = () => {
 
 
 
-    let URl = `https://image-site-app.herokuapp.com/`
+    let URl = `https://image-gram-test.herokuapp.com/`
     let userSettings = userSettingsFetch();
 
     userSettings.then((settings) => {
@@ -195,7 +195,7 @@ const changePassword = () => {
 
         if(password === newpassword){
             console.log("password matched")
-            let userURL = `https://image-site-app.herokuapp.com/users/password`
+            let userURL = `https://image-gram-test.herokuapp.com/users/password`
 
             fetch(`${userURL}/${token}`, {
                 method: "POST",
@@ -270,7 +270,7 @@ const deleteUserAccount = () => {
 
 
     deleteButton.addEventListener("click", () => {
-        let userURl = `https://image-site-app.herokuapp.com/users/register`
+        let userURl = `https://image-gram-test.herokuapp.com/users/register`
 
         fetch(`${userURl}/${token}`, {
             method: "POST",
