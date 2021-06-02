@@ -251,8 +251,6 @@
             // }
 
             function login() {
-                
-                e.preventDefault()
                 FB.login((res) => {
                     console.log(res)
                 }, { scope: "public_profile,email"})
