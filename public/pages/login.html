@@ -126,7 +126,7 @@
                                     <button class="register_google"><i class="fab fa-google"></i> Google</button>
                                 </a>
                                 <a href="#">
-                                    <button type="submit" class="register_facebook"><i class="fab fa-facebook-square"></i> Facebook</button>
+                                    <button type="submit" onclick="login()" class="register_facebook"><i class="fab fa-facebook-square"></i> Facebook</button>
                                 </a>
                                 
                             </div>
@@ -237,7 +237,7 @@
             //     });
             // }
 
-            function login(res) {
+            function login() {
                 FB.login((res) => {
                     console.log(res)
                 })
