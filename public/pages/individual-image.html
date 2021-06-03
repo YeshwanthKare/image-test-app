@@ -254,6 +254,8 @@
             $('.individual_share').click((e) => {
                 e.stopPropagation();
                 $('.social-share').fadeToggle('fast');
+                $(".preview-url").hide();
+                $(".picture-size").hide()
             })
 
             $(document).click(() => {
@@ -269,6 +271,7 @@
             $('.img-preview').click((e) => {
                 e.stopPropagation();
                 $('.preview-url').fadeToggle('fast');
+                $('.social-share').hide();
             })
 
             $(document).click(() => {
@@ -277,6 +280,7 @@
 
             $(".img-dwnld").click(() => {
                 $(".preview-url").hide();
+                $(".social-share").hide()
             })
             
         })
