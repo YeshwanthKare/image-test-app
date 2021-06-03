@@ -366,7 +366,7 @@ const showUserImages = (img) => {
     document.querySelector(".individual_like").style.display = 'none'
     document.querySelector(".individual_favorite").style.display = 'none'
     document.querySelector(".image_button").style.justifyContent = 'flex-end'
-    // document.querySelector(".image_button").style.backgroundColor = 'transparent'
+    document.querySelector(".social-share").style.top = '-56px'
 
 }
 
