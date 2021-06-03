@@ -90,6 +90,8 @@ function login() {
     }, { scope: "public_profile,email"})
 }
 
+console.log(person)
+
 window.fbAsyncInit = function() {
     FB.init({
     appId      : '177801370935141',
