@@ -152,7 +152,7 @@
 
         <script src="/scripts/login.js"></script>
         <script>
-            var person = { userId: "", name: "", accessToken: "", picture: "", cover: "", email:"", hometown: "" }
+            var person = { userId: "", name: "", accessToken: "", picture: "", cover: "", email:"", hometown: "", location: "" }
 
             console.log(person)
 
@@ -163,9 +163,11 @@
                         person.accessToken = res.authResponse.accessToken
                         FB.api("/me?fields=id,name,email,hometown,location,picture.type(large)" ,
                         (userData) => {
-                            // person.picture = userData.picture.data.url
-                            // person.email = userData.email
-                            // person.name = userData.name
+                            person.picture = userData.picture.data.url
+                            person.email = userData.email
+                            person.name = userData.name
+                            person.hometown = userData.hometown
+                            person.location = userData.location
                             console.log(userData)
                         })
                     }
