@@ -75,6 +75,8 @@ form.addEventListener("click", (e) => {
 
 var person = { userId: "", name: "", accessToken: "", picture: "", cover: "", email:"", hometown: "" }
 
+console.log(person)
+
 function login() {
     FB.login((res) => {
         if(res.status == "connected"){
@@ -89,8 +91,6 @@ function login() {
         }
     }, { scope: "public_profile,email"})
 }
-
-console.log(person)
 
 window.fbAsyncInit = function() {
     FB.init({
