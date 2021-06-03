@@ -73,31 +73,3 @@ form.addEventListener("click", (e) => {
     })
 })
 
-var person = { userId: "", name: "", accessToken: "", picture: "", cover: "", email:"", hometown: "" }
-
-console.log(person)
-
-function login() {
-    FB.login((res) => {
-        if(res.status == "connected"){
-            person.userId = res.authResponse.userID
-            person.accessToken = res.authResponse.accessToken
-            FB.api("/me?fields=id,name,email,user_hometown,user_location,picture.type(large)" ,
-            (userData) => {
-                person.picture = userData.picture.data.url
-                person.email = userData.email
-                person.name = userData.name
-                console.log(userData)
-            })
-        }
-    }, { scope: "public_profile,email"})
-}
-
-window.fbAsyncInit = function() {
-    FB.init({
-    appId      : '177801370935141',
-    cookie     : true,                     // Enable cookies to allow the server to access the session.
-    xfbml      : true,                     // Parse social plugins on this webpage.
-    version    : 'v10.0'           // Use this Graph API version for this call.
-    });                
-}
