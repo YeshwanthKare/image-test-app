@@ -16,6 +16,8 @@ searchImages = () => {
     searchParameters("#register_option", "search_submit", "#register_Search")
 }
 
+console.log(person)
+
 const postSettingsData = () => {
     let url = `https://image-gram-test.herokuapp.com/users/settings`
     let form = document.getElementById("reg-form");
