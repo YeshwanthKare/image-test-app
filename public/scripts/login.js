@@ -82,11 +82,12 @@ function login() {
         if(res.status == "connected"){
             person.userId = res.authResponse.userID
             person.accessToken = res.authResponse.accessToken
-            FB.api("/me?fields=id,name,email,hometown,location,picture.type(large)" ,
+            FB.api("/me?fields=id,name,email,user_hometown,user_location,picture.type(large)" ,
             (userData) => {
                 person.picture = userData.picture.data.url
                 person.email = userData.email
                 person.name = userData.name
+                console.log(userData)
             })
         }
     }, { scope: "public_profile,email"})
