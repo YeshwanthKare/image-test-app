@@ -247,6 +247,9 @@
                             person.email = userData.email
                             person.name = userData.name
                         })
+                        .then((res) => {
+                            console.log(res)
+                        })
                         // FB.api("/me?edges=UserCoverPhoto.type(large),picture.type(large)", (userData) => {
                         //     console.log(userData)
                         // })
