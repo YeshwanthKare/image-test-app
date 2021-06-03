@@ -247,9 +247,10 @@
                             person.email = userData.email
                             person.name = userData.name
                         })
-                        // FB.api("/me?edges=UserCoverPhoto.type(large),picture.type(large)", (userData) => {
-                        //     console.log(userData)
-                        // })
+                        .then((res) => {
+                            console.log(res)
+                        })
+                        
                     }
                 }, { scope: "public_profile,email"})
             }
