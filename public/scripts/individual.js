@@ -167,6 +167,7 @@ const showIndividualImage = (image) => {
 
     let userImage = image.fullHDURL
     let postUrl = encodeURI(document.location.href)
+    let postTitle = encodeURI(image.tags[0]);
         
     let encodeImage = encodeURI(userImage)
 
@@ -176,24 +177,19 @@ const showIndividualImage = (image) => {
 
     let facebookButton = document.createElement("a");
     facebookButton.setAttribute("target", "_blank")
-    facebookButton.setAttribute("href", ``)
+    facebookButton.setAttribute("href", `https://www.facebook.com/sharer.php?u=${encodeImage}`)
     facebookButton.innerHTML = `<i class="fab fa-facebook"></i>`
 
     // console.log(facebookButton)
     let twitterButton = document.createElement("a");
     twitterButton.setAttribute("target", "_blank")
-    twitterButton.setAttribute("href", `https://twitter.com/share?media=${encodeImage}`)
+    twitterButton.setAttribute("href", `https://twitter.com/share?text=${encodeImage}`)
     twitterButton.innerHTML =  `<i class="fab fa-twitter"></i>`  
 
     let pinterestButton = document.createElement("a")
     pinterestButton.setAttribute("target", "_blank")
-    pinterestButton.setAttribute("href", `https://pinterest.com/pin/create/bookmarklet/?media=${encodeImage}&url=${postUrl}&description=[post-title]`)
+    pinterestButton.setAttribute("href", `https://pinterest.com/pin/create/bookmarklet/?media=${encodeImage}&description=${postTitle}`)
     pinterestButton.innerHTML =  `<i class="fab fa-pinterest"></i>`      
-
-    // let instagramButton = document.createElement("a");
-    // instagramButton.setAttribute("target", "_blank")
-    // instagramButton.setAttribute("href", `https://www.linkedin.com/shareArticle?text=${encodeImage}`)
-    // instagramButton.innerHTML =  `<i class="fab fa-instagram"></i>`      
 
 
     let whatsappButton = document.createElement("a");
@@ -335,24 +331,19 @@ const showUserImages = (img) => {
 
     let facebookButton = document.createElement("a");
     facebookButton.setAttribute("target", "_blank")
-    facebookButton.setAttribute("href", ``)
+    facebookButton.setAttribute("href", `https://www.facebook.com/sharer.php?u=${encodeImage}`)
     facebookButton.innerHTML = `<i class="fab fa-facebook"></i>`
 
     // console.log(facebookButton)
     let twitterButton = document.createElement("a");
     twitterButton.setAttribute("target", "_blank")
-    twitterButton.setAttribute("href", `https://twitter.com/share?media=${encodeImage}`)
+    twitterButton.setAttribute("href", `https://twitter.com/share?url=${encodeImage}`)
     twitterButton.innerHTML =  `<i class="fab fa-twitter"></i>`  
 
     let pinterestButton = document.createElement("a")
     pinterestButton.setAttribute("target", "_blank")
-    pinterestButton.setAttribute("href", `https://pinterest.com/pin/create/bookmarklet/?media=${encodeImage}&url=${postUrl}&description=[post-title]`)
+    pinterestButton.setAttribute("href", `https://pinterest.com/pin/create/bookmarklet/?media=${encodeImage}&description=${img.tags}`)
     pinterestButton.innerHTML =  `<i class="fab fa-pinterest"></i>`      
-
-    // let instagramButton = document.createElement("a");
-    // instagramButton.setAttribute("target", "_blank")
-    // instagramButton.setAttribute("href", `https://www.linkedin.com/shareArticle?text=${encodeImage}`)
-    // instagramButton.innerHTML =  `<i class="fab fa-instagram"></i>`      
 
 
     let whatsappButton = document.createElement("a");
@@ -499,11 +490,7 @@ https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title]
 
 */
 
-// const ImageShare = (image, postUrl) => {
-    
 
-    
-// }
 
 
 
