@@ -206,6 +206,8 @@ const showIndividualImage = (image) => {
     // shareContainer.appendChild(instagramButton)
     shareContainer.appendChild(whatsappButton) 
 
+    shareContainer.style.top = "-56px"
+
 
 }
 
@@ -327,6 +329,8 @@ const showUserImages = (img) => {
 
     let shareContainer = document.querySelector(".social-share")
 
+    shareContainer.style.top = "-112px"
+
     console.log(shareContainer)
 
     let facebookButton = document.createElement("a");
@@ -357,7 +361,6 @@ const showUserImages = (img) => {
     shareContainer.appendChild(facebookButton)
     shareContainer.appendChild(twitterButton)
     shareContainer.appendChild(pinterestButton)
-    // shareContainer.appendChild(instagramButton)
     shareContainer.appendChild(whatsappButton)
 
 
@@ -366,7 +369,7 @@ const showUserImages = (img) => {
     document.querySelector(".individual_like").style.display = 'none'
     document.querySelector(".individual_favorite").style.display = 'none'
     document.querySelector(".image_button").style.justifyContent = 'flex-end'
-    document.querySelector(".social-share").style.top = '-56px'
+    // document.querySelector(".social-share").style.top = '-56px'
 
 }
 
