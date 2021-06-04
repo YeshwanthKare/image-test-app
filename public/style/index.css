@@ -654,11 +654,11 @@ body{
 .footer {
     height: 450px;
     /* background-color: dodgerblue; */
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
     
 }
 
@@ -731,7 +731,7 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 285px;
+    /* left: 285px; */
     /* font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
     
 }
@@ -739,6 +739,7 @@ body{
 .footer .footer_data p:nth-child(1){
     position: absolute;
     top: -80px;
+    transform: scaleX(200px);
     color: #515457;
     font-size: 25px;
     font-family: "Open Sans", sans-serif;
@@ -868,7 +869,7 @@ body{
 } 
 
 .images .images_container .wrapper {
-    height: 100%;
+    height: auto;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 20px;

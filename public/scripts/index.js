@@ -159,6 +159,7 @@ function removingLogin(){
         document.querySelector(".hr-line").style.display = "block"
         document.querySelector(".sign-up").style.display = "block";
         document.querySelector(".user_profile_pic").style.display = "none"
+        document.querySelector(".footer").style.display = "flex"
     }else if(typeof token === "string"){
         document.querySelector(".user_profile_pic").style.display = "block"
         document.querySelector(".explore_dropdown").style.right = '220px';
@@ -167,9 +168,14 @@ function removingLogin(){
         document.querySelector(".join").style.display = "none"
         document.getElementById("login").style.display = "none"        
         document.querySelector(".hr-line").style.display = "none"
+        document.querySelector(".end_footer").style.display = "none"
+        document.querySelector(".join-imagegram").style.display = "none"
+        document.querySelector(".desc-gram").style.top = "120px"
+        document.querySelector(".footer").style.top = "80px"
     }
     else{
         document.querySelector(".user_profile_pic").style.display = "none"
+        document.querySelector(".footer").style.display = "flex"
     }
 
 }
