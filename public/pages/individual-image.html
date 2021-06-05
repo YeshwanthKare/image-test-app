@@ -228,6 +228,13 @@
             $(document).click(() => {
                 $('.user_profile_dropdown').hide();
             })
+
+            $(".user_profile_pic").click(() => {
+                $(".picture-size").hide();
+                $(".preview-url").hide();
+                $(".social-share").hide();
+                
+            })
             
         })
 
@@ -246,9 +253,8 @@
 
             $(".img-preview").click(() => {
                 $(".picture-size").hide();
-            })
-
-            
+                $(".user_profile_dropdown").hide()
+            })                       
             
         })
 
@@ -261,6 +267,7 @@
                 $('.social-share').fadeToggle('fast');
                 $(".preview-url").hide();
                 $(".picture-size").hide()
+                $(".user_profile_dropdown").hide()
             })
 
             $(document).click(() => {
@@ -277,6 +284,7 @@
                 e.stopPropagation();
                 $('.preview-url').fadeToggle('fast');
                 $('.social-share').hide();
+                $(".user_profile_dropdown").hide()
             })
 
             $(document).click(() => {
@@ -286,6 +294,7 @@
             $(".img-dwnld").click(() => {
                 $(".preview-url").hide();
                 $(".social-share").hide()
+                $(".user_profile_dropdown").hide()
             })
             
         })

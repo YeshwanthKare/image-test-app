@@ -226,6 +226,10 @@
     grid-column: span 2;
 }
 
+.footer {
+    z-index: -1;
+}
+
 .search-footer {
     margin-top: 60px;
     width: 100%;
