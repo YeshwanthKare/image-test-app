@@ -278,6 +278,7 @@ const deleteUserAccount = () => {
 
 
     deleteButton.addEventListener("click", () => {
+        logOut()
         let userURl = `https://image-gram-test.herokuapp.com/users/register`
 
         fetch(`${userURl}/${token}`, {
@@ -291,7 +292,6 @@ const deleteUserAccount = () => {
         })
         .then((res) => {
             if(res){
-                localStorage.removeItem("token")
                 location.href ="/pages/register.html"
             }
             console.log(res)
