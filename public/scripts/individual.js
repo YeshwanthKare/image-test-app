@@ -6,13 +6,18 @@ window.onload = () => {
     removingLogin();
     userSettingFetch();
     removeImage();
-    
+    removingFooter()
 }
 
 const getPostIdParam = () => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     return urlParams.get('id');
+}
+
+
+const removingFooter = () => {
+    document.querySelector(".end_footer").classList.remove("end_footer")
 }
 
 

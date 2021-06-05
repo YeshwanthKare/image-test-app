@@ -10,11 +10,18 @@ window.onload = () => {
     changePassword();
     deleteUserModal();
     deleteUserAccount()
+    removingFter()
 }
 
 searchImages = () => {
     searchParameters("#register_option", "search_submit", "#register_Search")
 }
+
+
+const removingFter = () => {
+    document.querySelector(".end-footer").classList.remove("footer")
+}
+
 
 
 const postSettingsData = () => {
